@@ -25,10 +25,23 @@ export const Hero = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button variant="hero" size="lg" className="text-lg px-8 py-4">
+          <Button 
+            variant="hero" 
+            size="lg" 
+            className="text-lg px-8 py-4"
+            onClick={() => window.open('tel:+18036420096', '_self')}
+          >
             Book Appointment
           </Button>
-          <Button variant="ghost" size="lg" className="text-lg px-8 py-4 text-white border-white hover:bg-white/20">
+          <Button 
+            variant="ghost" 
+            size="lg" 
+            className="text-lg px-8 py-4 text-white border-white hover:bg-white/20"
+            onClick={() => {
+              const servicesSection = document.getElementById('services');
+              servicesSection?.scrollIntoView({ behavior: 'smooth' });
+            }}
+          >
             View Services
           </Button>
         </div>

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Map } from "@/components/Map";
 
 export const Contact = () => {
   const hours = [
@@ -52,12 +53,20 @@ export const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-medium text-primary">Phone</h4>
-                  <p className="text-muted-foreground">(803) 642-0096</p>
+                  <a 
+                    href="tel:+18036420096" 
+                    className="text-muted-foreground hover:text-primary transition-colors cursor-pointer"
+                  >
+                    (803) 642-0096
+                  </a>
                 </div>
               </div>
               
               <div className="pt-4">
-                <Button className="w-full luxury-gradient text-white hover:shadow-glow transition-luxury">
+                <Button 
+                  className="w-full luxury-gradient text-white hover:shadow-glow transition-luxury"
+                  onClick={() => window.open('tel:+18036420096', '_self')}
+                >
                   Call to Book
                 </Button>
               </div>
@@ -84,26 +93,14 @@ export const Contact = () => {
             </CardContent>
           </Card>
           
-          {/* Map Placeholder */}
+          {/* Interactive Map */}
           <Card className="shadow-luxury border-border/50">
             <CardHeader>
               <CardTitle className="text-2xl text-primary">Find Us</CardTitle>
               <CardDescription>Easy to locate and plenty of parking</CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="aspect-square bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg flex items-center justify-center">
-                <div className="text-center text-muted-foreground">
-                  <div className="w-12 h-12 mx-auto mb-2 text-primary">
-                    <svg fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <p className="text-sm">407 Fabian Dr<br />Aiken, SC 29803</p>
-                </div>
-              </div>
-              <Button variant="outline" className="w-full mt-4">
-                Get Directions
-              </Button>
+              <Map />
             </CardContent>
           </Card>
         </div>
