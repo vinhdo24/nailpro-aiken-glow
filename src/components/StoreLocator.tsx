@@ -25,10 +25,10 @@ export const StoreLocator = () => {
       },
       "mapsApiKey": "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg",
       "capabilities": {
-        "input": true,
-        "autocomplete": true,
+        "input": false,
+        "autocomplete": false,
         "directions": false,
-        "distanceMatrix": true,
+        "distanceMatrix": false,
         "details": false,
         "actions": false
       }
@@ -53,21 +53,21 @@ export const StoreLocator = () => {
         style={{
           width: '100%',
           height: '100%',
-          // Custom CSS variables to match the website theme
-          '--gmpx-color-surface': 'hsl(var(--background))',
-          '--gmpx-color-on-surface': 'hsl(var(--foreground))',
-          '--gmpx-color-on-surface-variant': 'hsl(var(--muted-foreground))',
-          '--gmpx-color-primary': 'hsl(var(--primary))',
-          '--gmpx-color-outline': 'hsl(var(--border))',
+          // Custom CSS variables to match the provided template
+          '--gmpx-color-surface': '#fff',
+          '--gmpx-color-on-surface': '#212121',
+          '--gmpx-color-on-surface-variant': '#757575',
+          '--gmpx-color-primary': '#1967d2',
+          '--gmpx-color-outline': '#e0e0e0',
           '--gmpx-fixed-panel-width-row-layout': '28.5em',
           '--gmpx-fixed-panel-height-column-layout': '65%',
-          '--gmpx-font-family-base': 'inherit',
-          '--gmpx-font-family-headings': 'inherit',
+          '--gmpx-font-family-base': '"Roboto", sans-serif',
+          '--gmpx-font-family-headings': '"Roboto", sans-serif',
           '--gmpx-font-size-base': '0.875rem',
           '--gmpx-hours-color-open': '#188038',
           '--gmpx-hours-color-closed': '#d50000',
           '--gmpx-rating-color': '#ffb300',
-          '--gmpx-rating-color-empty': 'hsl(var(--muted))'
+          '--gmpx-rating-color-empty': '#e0e0e0'
         } as React.CSSProperties}
       />
     </div>
