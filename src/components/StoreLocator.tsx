@@ -6,7 +6,7 @@ export const StoreLocator = () => {
     const CONFIGURATION = {
       "locations": [
         {
-          "title": "Nail Pro & Spa",
+          "title": "407 Fabian Dr",
           "address1": "407 Fabian Dr",
           "address2": "Aiken, SC 29803, USA",
           "coords": { "lat": 33.518722781032054, "lng": -81.72403737790987 },
@@ -14,20 +14,20 @@ export const StoreLocator = () => {
         }
       ],
       "mapOptions": {
-        "center": { "lat": 33.518722781032054, "lng": -81.72403737790987 },
+        "center": { "lat": 38.0, "lng": -100.0 },
         "fullscreenControl": true,
         "mapTypeControl": false,
         "streetViewControl": false,
-        "zoom": 15,
+        "zoom": 4,
         "zoomControl": true,
         "maxZoom": 17,
         "mapId": ""
       },
-      "mapsApiKey": "AIzaSyBFw0Qbyq9zTFTd-tUY6dotiHU1OriOGX4",
+      "mapsApiKey": "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg",
       "capabilities": {
         "input": true,
         "autocomplete": true,
-        "directions": true,
+        "directions": false,
         "distanceMatrix": true,
         "details": false,
         "actions": false
