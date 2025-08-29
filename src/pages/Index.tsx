@@ -1,17 +1,7 @@
-import { Hero } from "@/components/Hero";
-import { Services } from "@/components/Services";
-import { About } from "@/components/About";
-import { Contact } from "@/components/Contact";
+import { LandingPage } from "@/components/LandingPage";
 
 const Index = () => {
-  return (
-    <div className="min-h-screen">
-      <Hero />
-      <Services />
-      <About />
-      <Contact />
-    </div>
-  );
+  return <LandingPage />;
 };
 
 export default Index;
