@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Map } from "@/components/Map";
+import { StoreLocator } from "@/components/StoreLocator";
 
 export const Contact = () => {
   const hours = [
@@ -100,7 +100,7 @@ export const Contact = () => {
               <CardDescription>Easy to locate and plenty of parking</CardDescription>
             </CardHeader>
             <CardContent>
-              <Map />
+              <StoreLocator />
             </CardContent>
           </Card>
         </div>
