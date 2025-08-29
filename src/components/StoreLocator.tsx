@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 export const StoreLocator = () => {
   useEffect(() => {
-    // Configuration for the store locator
+    // Configuration for the store locator matching the new template
     const CONFIGURATION = {
       "locations": [
         {
@@ -34,7 +34,7 @@ export const StoreLocator = () => {
       }
     };
 
-    // Wait for the component to be defined and configure it
+    // Configure the locator when the DOM is ready
     const configureLocator = async () => {
       await customElements.whenDefined('gmpx-store-locator');
       const locator = document.querySelector('gmpx-store-locator');
