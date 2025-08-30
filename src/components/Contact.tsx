@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { StoreLocator } from "@/components/StoreLocator";
 
 export const Contact = () => {
@@ -63,12 +64,32 @@ export const Contact = () => {
               </div>
               
               <div className="pt-4">
-                <Button 
-                  className="w-full luxury-gradient text-white hover:shadow-glow transition-luxury"
-                  onClick={() => window.open('tel:+18036420096', '_self')}
-                >
-                  Call to Book
-                </Button>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button className="w-full luxury-gradient text-white hover:shadow-glow transition-luxury">
+                      Call to Book
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-md">
+                    <DialogHeader>
+                      <DialogTitle className="text-center text-primary">Call to Book Your Appointment</DialogTitle>
+                      <DialogDescription className="text-center">
+                        Tap the number below to call us directly
+                      </DialogDescription>
+                    </DialogHeader>
+                    <div className="text-center py-6">
+                      <a 
+                        href="tel:+18036420096"
+                        className="text-3xl font-bold text-primary hover:text-primary/80 transition-colors block"
+                      >
+                        (803) 642-0096
+                      </a>
+                      <p className="text-sm text-muted-foreground mt-2">
+                        Available during business hours
+                      </p>
+                    </div>
+                  </DialogContent>
+                </Dialog>
               </div>
             </CardContent>
           </Card>
