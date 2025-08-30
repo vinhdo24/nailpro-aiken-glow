@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import heroImage from "@/assets/hero-nails.jpg";
 
 export const Hero = () => {
@@ -25,14 +26,36 @@ export const Hero = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button 
-            variant="hero" 
-            size="lg" 
-            className="text-lg px-8 py-4"
-            onClick={() => window.open('tel:+18036420096', '_self')}
-          >
-            Book Appointment
-          </Button>
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button 
+                variant="hero" 
+                size="lg" 
+                className="text-lg px-8 py-4"
+              >
+                Book Appointment
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="max-w-md">
+              <DialogHeader>
+                <DialogTitle className="text-center text-primary">Book Your Appointment</DialogTitle>
+                <DialogDescription className="text-center">
+                  Call us now to schedule your visit
+                </DialogDescription>
+              </DialogHeader>
+              <div className="text-center py-6">
+                <a 
+                  href="tel:+18036420096"
+                  className="text-3xl font-bold text-primary hover:text-primary/80 transition-colors block"
+                >
+                  (803) 642-0096
+                </a>
+                <p className="text-sm text-muted-foreground mt-2">
+                  Available during business hours
+                </p>
+              </div>
+            </DialogContent>
+          </Dialog>
           <Button 
             variant="ghost" 
             size="lg" 
