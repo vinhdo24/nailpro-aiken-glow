@@ -48,7 +48,7 @@ export const Services = () => {
               <div className="relative overflow-hidden rounded-t-lg">
                 <img 
                   src={service.image} 
-                  alt={service.title}
+                  alt={`Professional ${service.title.toLowerCase()} service at Nail Pro & Spa Aiken SC - ${service.description}`}
                   className="w-full h-48 object-cover group-hover:scale-105 transition-luxury"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />

@@ -9,6 +9,8 @@ export const Hero = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroImage})` }}
+        role="img"
+        aria-label="Luxury nail salon interior at Nail Pro & Spa in Aiken, SC - elegant manicure and pedicure station"
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/20" />
       </div>
