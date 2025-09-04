@@ -18,48 +18,59 @@ interface ServiceDetail {
 
 const serviceDetails: ServiceDetail[] = [
   {
-    id: "signature-manicure",
-    name: "Signature Manicure",
-    shortDescription: "Complete nail care with shaping, cuticle treatment, and polish",
-    fullDescription: "Our signature manicure is a comprehensive nail care service that includes nail shaping, cuticle care, hand massage, and your choice of premium polish. Perfect for maintaining healthy, beautiful nails.",
-    features: ["Nail shaping & filing", "Cuticle treatment", "Hand exfoliation", "Relaxing hand massage", "Base coat, color & top coat", "Quick dry finish"],
-    duration: "45-60 minutes",
-    priceRange: "$25-$35",
-    benefits: ["Healthier cuticles", "Smoother hands", "Long-lasting polish", "Professional appearance"],
-    process: ["Consultation & color selection", "Nail shaping & cuticle care", "Hand exfoliation & massage", "Polish application", "Finishing touches"]
+    id: "manicure-services",
+    name: "Manicure Services",
+    shortDescription: "Professional nail care and gel polish applications",
+    fullDescription: "Complete manicure services from basic nail care to premium gel applications. All services include nail shaping, cuticle care, and professional polish application.",
+    features: ["Basic Manicure - $20", "Manicure with Gel Color - $35", "Manicure with Gel French - $40", "Take off + Basic Manicure - $30+", "Gel Soak off with Gel Color - $35"],
+    duration: "30-60 minutes",
+    priceRange: "$20-$40",
+    benefits: ["Professional nail shaping", "Long-lasting gel polish", "Cuticle care", "Clean, polished look"],
+    process: ["Nail preparation & shaping", "Cuticle treatment", "Polish application", "Finishing touches", "Quick dry or UV cure"]
   },
   {
-    id: "luxury-pedicure", 
-    name: "Luxury Pedicure",
-    shortDescription: "Relaxing foot treatment with exfoliation, massage, and polish",
-    fullDescription: "Indulge in our luxury pedicure featuring a relaxing foot soak, callus removal, exfoliation, extended foot and calf massage, and premium polish application in our comfortable spa chairs.",
-    features: ["Warm foot soak", "Callus removal", "Foot & leg exfoliation", "Extended massage", "Nail shaping & cuticle care", "Premium polish application"],
-    duration: "60-75 minutes", 
+    id: "pedicure-services", 
+    name: "Pedicure Services",
+    shortDescription: "Relaxing foot treatments with optional gel polish",
+    fullDescription: "Comprehensive pedicure services featuring foot soaks, exfoliation, massage, and professional polish. Add gel color for longer-lasting results.",
+    features: ["Basic Pedicure - $35", "Deluxe Pedicure - $50", "Gel Color on Toes - $20+", "Add Paraffin Wax - $7", "Add Hot Stone - $5", "Toes with French - $35+"],
+    duration: "45-75 minutes", 
     priceRange: "$35-$50",
-    benefits: ["Softer, smoother feet", "Improved circulation", "Stress relief", "Professional foot care"],
-    process: ["Foot soak preparation", "Callus & dead skin removal", "Exfoliation treatment", "Massage therapy", "Nail care & polish"]
+    benefits: ["Soft, smooth feet", "Relaxing foot massage", "Professional pedicure care", "Long-lasting results"],
+    process: ["Foot soak", "Callus removal", "Exfoliation", "Massage therapy", "Nail care & polish"]
   },
   {
-    id: "gel-manicure",
-    name: "Gel Manicure", 
-    shortDescription: "Long-lasting gel polish that won't chip for weeks",
-    fullDescription: "Our gel manicure uses high-quality gel polish that's cured under UV light for a durable, glossy finish that lasts 2-3 weeks without chipping or peeling.",
-    features: ["Professional nail prep", "Gel base coat", "Two coats of gel color", "UV light curing", "Glossy top coat", "Cuticle oil finish"],
-    duration: "60-75 minutes",
-    priceRange: "$40-$55", 
-    benefits: ["2-3 week durability", "Chip-resistant finish", "High gloss shine", "Instant dry time"],
-    process: ["Nail preparation & shaping", "Base coat application", "Color application & curing", "Top coat & final cure", "Finishing treatment"]
+    id: "nail-extensions",
+    name: "Nail Extensions & Enhancements", 
+    shortDescription: "Full sets, fills, and specialty nail applications",
+    fullDescription: "Professional nail extensions and enhancements including Solar, SNS, Gel Powder, and Ombre techniques. Full sets and regular fill-ins available.",
+    features: ["Solar (Pink & White) Full Set - $65+", "Solar Pink Only Full Set - $35+", "Gel Powder Full Set - $35+", "SNS - $45+", "Ombre Full Set - $65+", "Fill-ins available"],
+    duration: "60-90 minutes",
+    priceRange: "$35-$65+", 
+    benefits: ["Extended nail length", "Durable finish", "Custom designs", "Professional strength"],
+    process: ["Nail preparation", "Extension application", "Shaping & filing", "Polish application", "Final inspection"]
   },
   {
-    id: "nail-art",
-    name: "Custom Nail Art",
-    shortDescription: "Creative designs and artistic nail decorations", 
-    fullDescription: "Express your style with our custom nail art services. From simple accent nails to intricate designs, our talented nail artists can create the perfect look for any occasion.",
-    features: ["Custom design consultation", "Hand-painted artwork", "Decorative elements", "Seasonal themes", "Special occasion designs", "Trend-inspired looks"],
-    duration: "75-90 minutes",
-    priceRange: "$50-$80",
-    benefits: ["Unique personal expression", "Professional artistry", "Instagram-worthy nails", "Conversation starters"],
-    process: ["Design consultation", "Base preparation", "Artistic application", "Detail work", "Protective top coat"]
+    id: "waxing-services",
+    name: "Waxing Services",
+    shortDescription: "Complete body waxing for smooth, hair-free skin", 
+    fullDescription: "Professional waxing services for face and body. From eyebrow shaping to full leg waxing, we provide comfortable and effective hair removal.",
+    features: ["Eyebrows - $10", "Facial Waxing - $30+", "Bikini - $30+", "Full Legs - $60+", "Half Legs - $35+", "Under Arms - $25"],
+    duration: "15-60 minutes",
+    priceRange: "$6-$60+",
+    benefits: ["Smooth, hair-free skin", "Long-lasting results", "Professional technique", "Comfortable experience"],
+    process: ["Skin preparation", "Wax application", "Hair removal", "Soothing treatment", "Aftercare advice"]
+  },
+  {
+    id: "eyelash-services",
+    name: "Eyelash Services",
+    shortDescription: "Professional eyelash treatments for enhanced beauty",
+    fullDescription: "Enhance your natural beauty with our professional eyelash services designed to give you fuller, more defined lashes.",
+    features: ["Professional Eyelash Service - $35", "Expert application", "Quality materials", "Natural-looking results"],
+    duration: "30-45 minutes",
+    priceRange: "$35",
+    benefits: ["Enhanced eye appearance", "Professional application", "Quality results", "Confidence boost"],
+    process: ["Consultation", "Preparation", "Application", "Final touch-ups", "Aftercare instructions"]
   }
 ];
 

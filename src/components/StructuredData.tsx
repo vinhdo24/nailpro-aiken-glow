@@ -44,30 +44,84 @@ export const StructuredData = () => {
     },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Nail Services",
+      "name": "Nail & Beauty Services",
       "itemListElement": [
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Signature Manicure",
-            "description": "Complete nail care with shaping, cuticle treatment, and polish"
+            "name": "Basic Manicure",
+            "description": "Professional nail care with shaping, cuticle treatment, and polish",
+            "offers": {
+              "@type": "Offer",
+              "price": "20",
+              "priceCurrency": "USD"
+            }
           }
         },
         {
           "@type": "Offer", 
           "itemOffered": {
             "@type": "Service",
-            "name": "Luxury Pedicure",
-            "description": "Relaxing foot treatment with exfoliation, massage, and polish"
+            "name": "Basic Pedicure",
+            "description": "Relaxing foot treatment with exfoliation, massage, and polish",
+            "offers": {
+              "@type": "Offer",
+              "price": "35",
+              "priceCurrency": "USD"
+            }
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service", 
-            "name": "Gel Manicure",
-            "description": "Long-lasting gel polish application with UV curing"
+            "name": "Gel Manicure with Color",
+            "description": "Long-lasting gel manicure with professional color application",
+            "offers": {
+              "@type": "Offer",
+              "price": "35",
+              "priceCurrency": "USD"
+            }
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Solar Full Set",
+            "description": "Professional nail extensions with pink and white solar finish",
+            "offers": {
+              "@type": "Offer",
+              "price": "65",
+              "priceCurrency": "USD"
+            }
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Eyebrow Waxing",
+            "description": "Professional eyebrow shaping and waxing service",
+            "offers": {
+              "@type": "Offer",
+              "price": "10",
+              "priceCurrency": "USD"
+            }
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Eyelash Service",
+            "description": "Professional eyelash enhancement service",
+            "offers": {
+              "@type": "Offer",
+              "price": "35",
+              "priceCurrency": "USD"
+            }
           }
         }
       ]
