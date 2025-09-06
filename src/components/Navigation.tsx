@@ -90,7 +90,7 @@ export const Navigation = () => {
                   </a>
                   <div className="flex items-center text-sm text-muted-foreground">
                     <MapPin className="mr-1 h-4 w-4" />
-                    123 Beauty Street, Spa City, SC 12345
+                    407 Fabian Dr, Aiken, SC 29803
                   </div>
                 </div>
               </DialogContent>
@@ -170,7 +170,7 @@ export const Navigation = () => {
                       </a>
                       <div className="flex items-center text-sm text-muted-foreground">
                         <MapPin className="mr-1 h-4 w-4" />
-                        123 Beauty Street, Spa City, SC 12345
+                        407 Fabian Dr, Aiken, SC 29803
                       </div>
                     </div>
                   </DialogContent>

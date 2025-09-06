@@ -29,13 +29,13 @@ export const Footer = () => {
               </div>
               <div className="flex items-center text-sm text-foreground">
                 <Mail className="mr-3 h-4 w-4 text-primary" />
-                <a href="mailto:info@nailprospa.com" className="hover:text-primary transition-smooth">
-                  info@nailprospa.com
+                <a href="mailto:info@nailproinaiken.us" className="hover:text-primary transition-smooth">
+                  info@nailproinaiken.us
                 </a>
               </div>
               <div className="flex items-start text-sm text-foreground">
                 <MapPin className="mr-3 h-4 w-4 text-primary mt-0.5" />
-                <span>123 Beauty Street<br />Spa City, SC 12345</span>
+                <span>407 Fabian Dr<br />Aiken, SC 29803</span>
               </div>
             </div>
           </div>
@@ -138,8 +138,9 @@ export const Footer = () => {
               <div className="flex items-start text-sm text-foreground">
                 <Clock className="mr-3 h-4 w-4 text-primary mt-0.5" />
                 <div>
-                  <div className="text-muted-foreground">Mon - Sat: 9:00 AM - 7:00 PM</div>
-                  <div className="text-muted-foreground">Sunday: 10:00 AM - 6:00 PM</div>
+                  <div className="text-muted-foreground">Mon - Thu: 10:00 AM - 6:00 PM</div>
+                  <div className="text-muted-foreground">Fri - Sat: 9:30 AM - 6:00 PM</div>
+                  <div className="text-muted-foreground">Sunday: Closed</div>
                 </div>
               </div>
             </div>
@@ -148,7 +149,7 @@ export const Footer = () => {
               <h5 className="text-sm font-light text-foreground">Follow Us</h5>
               <div className="flex space-x-4">
                 <a 
-                  href="https://facebook.com/nailprospa" 
+                  href="https://facebook.com/nailproinaiken" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-smooth"
