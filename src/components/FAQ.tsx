@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     question: "What are your hours and location?",
-    answer: "We're located at 407 Fabian Dr, Aiken, SC 29803. Our hours are Monday-Friday 9:30am-7:00pm, Saturday 9:30am-6:00pm, and Sunday 11:00am-5:00pm. We're easily accessible and offer convenient parking."
+    answer: "We're located at 407 Fabian Dr, Aiken, SC 29803. Our hours are Monday-Thursday 10:00am-6:00pm, Friday-Saturday 9:30am-6:00pm, and we're closed on Sundays. We're easily accessible and offer convenient parking."
   },
   {
     question: "Do you offer nail art and custom designs?",
@@ -32,7 +32,7 @@ const faqs = [
   },
   {
     question: "How much do your services cost?",
-    answer: "Our prices are competitive and vary by service. Signature manicures start around $25, luxury pedicures from $35, and gel manicures from $40. Contact us for current pricing on all services and any seasonal promotions we may be offering."
+    answer: "Our prices are competitive and vary by service. Basic manicures start at $20, luxury pedicures from $35, and gel manicures from $35. Contact us for current pricing on all services and any seasonal promotions we may be offering."
   }
 ];
 

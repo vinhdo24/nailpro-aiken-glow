@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Menu, X, Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -79,6 +79,9 @@ export const Navigation = () => {
               <DialogContent className="sm:max-w-md">
                 <DialogHeader>
                   <DialogTitle className="text-center text-primary">Book Your Appointment</DialogTitle>
+                  <DialogDescription className="text-center text-muted-foreground">
+                    Contact us to schedule your professional nail care service
+                  </DialogDescription>
                 </DialogHeader>
                 <div className="flex flex-col items-center space-y-4 py-4">
                   <Phone className="h-12 w-12 text-primary" />
@@ -159,6 +162,9 @@ export const Navigation = () => {
                   <DialogContent className="sm:max-w-md">
                     <DialogHeader>
                       <DialogTitle className="text-center text-primary">Book Your Appointment</DialogTitle>
+                      <DialogDescription className="text-center text-muted-foreground">
+                        Contact us to schedule your professional nail care service
+                      </DialogDescription>
                     </DialogHeader>
                     <div className="flex flex-col items-center space-y-4 py-4">
                       <Phone className="h-12 w-12 text-primary" />

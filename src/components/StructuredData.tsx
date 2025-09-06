@@ -20,21 +20,15 @@ export const StructuredData = () => {
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "09:30",
-        "closes": "19:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification", 
-        "dayOfWeek": "Saturday",
-        "opens": "09:30",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+        "opens": "10:00",
         "closes": "18:00"
       },
       {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Sunday", 
-        "opens": "11:00",
-        "closes": "17:00"
+        "@type": "OpeningHoursSpecification", 
+        "dayOfWeek": ["Friday", "Saturday"],
+        "opens": "09:30",
+        "closes": "18:00"
       }
     ],
     "geo": {
