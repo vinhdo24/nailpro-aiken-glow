@@ -85,8 +85,8 @@ export const Navigation = () => {
                   <p className="text-center text-muted-foreground">
                     Call us to schedule your appointment
                   </p>
-                  <a href="tel:+1234567890" className="text-2xl font-light text-primary hover:text-primary-glow transition-smooth">
-                    (123) 456-7890
+                  <a href="tel:+18036420096" className="text-2xl font-light text-primary hover:text-primary-glow transition-smooth">
+                    (803) 642-0096
                   </a>
                   <div className="flex items-center text-sm text-muted-foreground">
                     <MapPin className="mr-1 h-4 w-4" />
@@ -165,8 +165,8 @@ export const Navigation = () => {
                       <p className="text-center text-muted-foreground">
                         Call us to schedule your appointment
                       </p>
-                      <a href="tel:+1234567890" className="text-2xl font-light text-primary hover:text-primary-glow transition-smooth">
-                        (123) 456-7890
+                      <a href="tel:+18036420096" className="text-2xl font-light text-primary hover:text-primary-glow transition-smooth">
+                        (803) 642-0096
                       </a>
                       <div className="flex items-center text-sm text-muted-foreground">
                         <MapPin className="mr-1 h-4 w-4" />
