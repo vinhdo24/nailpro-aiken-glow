@@ -15,7 +15,7 @@ export const StructuredData = () => {
       "addressCountry": "US"
     },
     "telephone": "(803) 642-0096",
-    "url": "https://nailproandspa.com",
+    "url": "https://nailproinaiken.us",
     "priceRange": "$$",
     "openingHoursSpecification": [
       {
@@ -136,13 +136,13 @@ export const StructuredData = () => {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://nailproandspa.com"
+        "item": "https://nailproinaiken.us"
       },
       {
         "@type": "ListItem", 
         "position": 2,
         "name": "Services",
-        "item": "https://nailproandspa.com#services"
+        "item": "https://nailproinaiken.us#services"
       }
     ]
   };
