@@ -1,79 +1,87 @@
-import { useState } from "react";
-import { Menu, X, Phone, MapPin } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("hero");
 
+  const sections = [
+    { id: "hero", label: "Home" },
+    { id: "services", label: "Services" },
+    { id: "about", label: "About" },
+    { id: "reviews", label: "Reviews" },
+    { id: "faq", label: "FAQ" },
+    { id: "contact", label: "Contact" },
+  ];
+
+  // Instant scroll to section
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsOpen(false);
+      element.scrollIntoView({ behavior: 'auto', block: 'start' });
+      setActiveSection(sectionId);
     }
   };
+
+  // Track active section on scroll
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { threshold: [0.5], rootMargin: "-80px 0px -80px 0px" }
+    );
+
+    sections.forEach(({ id }) => {
+      const element = document.getElementById(id);
+      if (element) observer.observe(element);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <nav className="fixed top-0 w-full z-50 glass-effect shadow-soft">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between gap-4 h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-light text-primary tracking-wide">
+            <h1 className="text-xl md:text-2xl font-light text-primary tracking-wide">
               Nail Pro & Spa
             </h1>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
-              <button
-                onClick={() => scrollToSection('hero')}
-                className="text-foreground hover:text-primary transition-smooth px-3 py-2 text-sm font-light"
-              >
-                Home
-              </button>
-              <button
-                onClick={() => scrollToSection('services')}
-                className="text-foreground hover:text-primary transition-smooth px-3 py-2 text-sm font-light"
-              >
-                Services
-              </button>
-              <button
-                onClick={() => scrollToSection('about')}
-                className="text-foreground hover:text-primary transition-smooth px-3 py-2 text-sm font-light"
-              >
-                About
-              </button>
-              <button
-                onClick={() => scrollToSection('reviews')}
-                className="text-foreground hover:text-primary transition-smooth px-3 py-2 text-sm font-light"
-              >
-                Reviews
-              </button>
-              <button
-                onClick={() => scrollToSection('faq')}
-                className="text-foreground hover:text-primary transition-smooth px-3 py-2 text-sm font-light"
-              >
-                FAQ
-              </button>
-              <button
-                onClick={() => scrollToSection('contact')}
-                className="text-foreground hover:text-primary transition-smooth px-3 py-2 text-sm font-light"
-              >
-                Contact
-              </button>
-            </div>
+          {/* Tab Navigation */}
+          <div className="flex-1 flex justify-center overflow-x-auto scrollbar-hide">
+            <Tabs value={activeSection} className="w-full max-w-3xl">
+              <TabsList className="inline-flex h-10 w-full bg-muted/50 p-1 rounded-lg">
+                {sections.map(({ id, label }) => (
+                  <TabsTrigger
+                    key={id}
+                    value={id}
+                    onClick={() => scrollToSection(id)}
+                    className="flex-1 min-w-[70px] text-xs md:text-sm font-light data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:shadow-sm transition-all"
+                  >
+                    {label}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+            </Tabs>
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
+          {/* Book Now Button */}
+          <div className="flex-shrink-0">
             <Dialog>
               <DialogTrigger asChild>
-                <Button variant="hero" size="sm">
-                  <Phone className="mr-2 h-4 w-4" />
-                  Book Now
+                <Button variant="hero" size="sm" className="h-9">
+                  <Phone className="h-3 w-3 md:mr-2 md:h-4 md:w-4" />
+                  <span className="hidden md:inline">Book Now</span>
                 </Button>
               </DialogTrigger>
               <DialogContent className="sm:max-w-md">
@@ -99,92 +107,7 @@ export const Navigation = () => {
               </DialogContent>
             </Dialog>
           </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-foreground hover:text-primary p-2"
-            >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
-          </div>
         </div>
-
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-card/95 backdrop-blur-sm rounded-lg mt-2 shadow-soft">
-              <button
-                onClick={() => scrollToSection('hero')}
-                className="block w-full text-left px-3 py-2 text-base font-light text-foreground hover:text-primary transition-smooth"
-              >
-                Home
-              </button>
-              <button
-                onClick={() => scrollToSection('services')}
-                className="block w-full text-left px-3 py-2 text-base font-light text-foreground hover:text-primary transition-smooth"
-              >
-                Services
-              </button>
-              <button
-                onClick={() => scrollToSection('about')}
-                className="block w-full text-left px-3 py-2 text-base font-light text-foreground hover:text-primary transition-smooth"
-              >
-                About
-              </button>
-              <button
-                onClick={() => scrollToSection('reviews')}
-                className="block w-full text-left px-3 py-2 text-base font-light text-foreground hover:text-primary transition-smooth"
-              >
-                Reviews
-              </button>
-              <button
-                onClick={() => scrollToSection('faq')}
-                className="block w-full text-left px-3 py-2 text-base font-light text-foreground hover:text-primary transition-smooth"
-              >
-                FAQ
-              </button>
-              <button
-                onClick={() => scrollToSection('contact')}
-                className="block w-full text-left px-3 py-2 text-base font-light text-foreground hover:text-primary transition-smooth"
-              >
-                Contact
-              </button>
-              <div className="px-3 py-2">
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <Button variant="hero" size="sm" className="w-full">
-                      <Phone className="mr-2 h-4 w-4" />
-                      Book Now
-                    </Button>
-                  </DialogTrigger>
-                  <DialogContent className="sm:max-w-md">
-                    <DialogHeader>
-                      <DialogTitle className="text-center text-primary">Book Your Appointment</DialogTitle>
-                      <DialogDescription className="text-center text-muted-foreground">
-                        Contact us to schedule your professional nail care service
-                      </DialogDescription>
-                    </DialogHeader>
-                    <div className="flex flex-col items-center space-y-4 py-4">
-                      <Phone className="h-12 w-12 text-primary" />
-                      <p className="text-center text-muted-foreground">
-                        Call us to schedule your appointment
-                      </p>
-                      <a href="tel:+18036420096" className="text-2xl font-light text-primary hover:text-primary-glow transition-smooth">
-                        (803) 642-0096
-                      </a>
-                      <div className="flex items-center text-sm text-muted-foreground">
-                        <MapPin className="mr-1 h-4 w-4" />
-                        407 Fabian Dr, Aiken, SC 29803
-                      </div>
-                    </div>
-                  </DialogContent>
-                </Dialog>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
     </nav>
   );
