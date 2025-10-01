@@ -2,7 +2,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
-import { Sparkles, Clock, Star } from "lucide-react";
+import { BookingDialog } from "@/components/BookingDialog";
+import { Sparkles, Clock, Star, MapPin } from "lucide-react";
 import manicureImage from "@/assets/manicure-service.jpg";
 import pedicureImage from "@/assets/pedicure-service.jpg";
 import extensionsImage from "@/assets/nail-extensions.jpg";
@@ -147,7 +148,7 @@ export const ServicePages = () => {
                 <Dialog>
                   <DialogTrigger asChild>
                     <Button className="w-full" variant="outline">
-                      Learn More & Book
+                      Learn More
                     </Button>
                   </DialogTrigger>
                   <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
@@ -216,14 +217,19 @@ export const ServicePages = () => {
                       </div>
 
                       <div className="flex flex-col sm:flex-row gap-3 pt-4 border-t">
+                        <BookingDialog fullWidth>
+                          Book This Service
+                        </BookingDialog>
                         <Button 
+                          variant="outline" 
                           className="flex-1"
-                          onClick={() => window.open('tel:(803) 642-0096', '_self')}
+                          onClick={() => {
+                            const contactSection = document.getElementById('contact');
+                            contactSection?.scrollIntoView({ behavior: 'smooth' });
+                          }}
                         >
-                          Call to Book: (803) 642-0096
-                        </Button>
-                        <Button variant="outline" className="flex-1">
-                          View Location & Hours  
+                          <MapPin className="h-4 w-4 mr-2" />
+                          View Location & Hours
                         </Button>
                       </div>
                     </div>

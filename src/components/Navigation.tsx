@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
-import { Phone, MapPin } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { BookingDialog } from "@/components/BookingDialog";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export const Navigation = () => {
@@ -77,35 +75,13 @@ export const Navigation = () => {
 
           {/* Book Now Button */}
           <div className="flex-shrink-0">
-            <Dialog>
-              <DialogTrigger asChild>
-                <Button variant="hero" size="sm" className="h-9">
-                  <Phone className="h-3 w-3 md:mr-2 md:h-4 md:w-4" />
-                  <span className="hidden md:inline">Book Now</span>
-                </Button>
-              </DialogTrigger>
-              <DialogContent className="sm:max-w-md">
-                <DialogHeader>
-                  <DialogTitle className="text-center text-primary">Book Your Appointment</DialogTitle>
-                  <DialogDescription className="text-center text-muted-foreground">
-                    Contact us to schedule your professional nail care service
-                  </DialogDescription>
-                </DialogHeader>
-                <div className="flex flex-col items-center space-y-4 py-4">
-                  <Phone className="h-12 w-12 text-primary" />
-                  <p className="text-center text-muted-foreground">
-                    Call us to schedule your appointment
-                  </p>
-                  <a href="tel:+18036420096" className="text-2xl font-light text-primary hover:text-primary-glow transition-smooth">
-                    (803) 642-0096
-                  </a>
-                  <div className="flex items-center text-sm text-muted-foreground">
-                    <MapPin className="mr-1 h-4 w-4" />
-                    407 Fabian Dr, Aiken, SC 29803
-                  </div>
-                </div>
-              </DialogContent>
-            </Dialog>
+            <BookingDialog 
+              variant="hero"
+              size="sm"
+              className="h-9"
+            >
+              <span className="hidden md:inline">Book Now</span>
+            </BookingDialog>
           </div>
         </div>
       </div>
