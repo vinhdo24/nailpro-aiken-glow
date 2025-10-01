@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
 import { Sparkles, Clock, Star } from "lucide-react";
+import gelImage from "@/assets/gel-manicure.jpg";
+import pedicureImage from "@/assets/pedicure-luxury.jpg";
 
 interface ServiceDetail {
   id: string;
@@ -14,6 +16,7 @@ interface ServiceDetail {
   priceRange: string;
   benefits: string[];
   process: string[];
+  image: string;
 }
 
 const serviceDetails: ServiceDetail[] = [
@@ -26,7 +29,8 @@ const serviceDetails: ServiceDetail[] = [
     duration: "30-60 minutes",
     priceRange: "$20-$40",
     benefits: ["Professional nail shaping", "Long-lasting gel polish", "Cuticle care", "Clean, polished look"],
-    process: ["Nail preparation & shaping", "Cuticle treatment", "Polish application", "Finishing touches", "Quick dry or UV cure"]
+    process: ["Nail preparation & shaping", "Cuticle treatment", "Polish application", "Finishing touches", "Quick dry or UV cure"],
+    image: gelImage
   },
   {
     id: "pedicure-services", 
@@ -37,7 +41,8 @@ const serviceDetails: ServiceDetail[] = [
     duration: "45-75 minutes", 
     priceRange: "$35-$50",
     benefits: ["Soft, smooth feet", "Relaxing foot massage", "Professional pedicure care", "Long-lasting results"],
-    process: ["Foot soak", "Callus removal", "Exfoliation", "Massage therapy", "Nail care & polish"]
+    process: ["Foot soak", "Callus removal", "Exfoliation", "Massage therapy", "Nail care & polish"],
+    image: pedicureImage
   },
   {
     id: "nail-extensions",
@@ -48,7 +53,8 @@ const serviceDetails: ServiceDetail[] = [
     duration: "60-90 minutes",
     priceRange: "$35-$65+", 
     benefits: ["Extended nail length", "Durable finish", "Custom designs", "Professional strength"],
-    process: ["Nail preparation", "Extension application", "Shaping & filing", "Polish application", "Final inspection"]
+    process: ["Nail preparation", "Extension application", "Shaping & filing", "Polish application", "Final inspection"],
+    image: gelImage
   },
   {
     id: "waxing-services",
@@ -59,7 +65,8 @@ const serviceDetails: ServiceDetail[] = [
     duration: "15-60 minutes",
     priceRange: "$6-$60+",
     benefits: ["Smooth, hair-free skin", "Long-lasting results", "Professional technique", "Comfortable experience"],
-    process: ["Skin preparation", "Wax application", "Hair removal", "Soothing treatment", "Aftercare advice"]
+    process: ["Skin preparation", "Wax application", "Hair removal", "Soothing treatment", "Aftercare advice"],
+    image: pedicureImage
   },
   {
     id: "eyelash-services",
@@ -70,7 +77,8 @@ const serviceDetails: ServiceDetail[] = [
     duration: "30-45 minutes",
     priceRange: "$35",
     benefits: ["Enhanced eye appearance", "Professional application", "Quality results", "Confidence boost"],
-    process: ["Consultation", "Preparation", "Application", "Final touch-ups", "Aftercare instructions"]
+    process: ["Consultation", "Preparation", "Application", "Final touch-ups", "Aftercare instructions"],
+    image: gelImage
   }
 ];
 
@@ -80,7 +88,7 @@ export const ServicePages = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light mb-6 text-primary">
-            Our Professional Services
+            Our Services
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Discover our complete range of nail care services, each designed to provide exceptional results and a luxurious experience.
@@ -89,7 +97,16 @@ export const ServicePages = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {serviceDetails.map((service) => (
-            <Card key={service.id} className="glass-effect border-primary/10 hover:shadow-luxury transition-all duration-300">
+            <Card key={service.id} className="group hover:shadow-luxury transition-luxury border-border/50 overflow-hidden">
+              <div className="relative overflow-hidden">
+                <img 
+                  src={service.image} 
+                  alt={`Professional ${service.name.toLowerCase()} at Nail Pro & Spa Aiken SC - ${service.shortDescription}`}
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-luxury"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+              </div>
+              
               <CardContent className="p-6">
                 <div className="flex items-center gap-2 mb-4">
                   <Sparkles className="w-5 h-5 text-primary" />
