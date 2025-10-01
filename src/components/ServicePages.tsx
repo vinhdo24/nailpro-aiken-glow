@@ -3,8 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
 import { Sparkles, Clock, Star } from "lucide-react";
-import gelImage from "@/assets/gel-manicure.jpg";
-import pedicureImage from "@/assets/pedicure-luxury.jpg";
+import manicureImage from "@/assets/manicure-service.jpg";
+import pedicureImage from "@/assets/pedicure-service.jpg";
+import extensionsImage from "@/assets/nail-extensions.jpg";
+import waxingImage from "@/assets/waxing-service.jpg";
+import eyelashImage from "@/assets/eyelash-service.jpg";
 
 interface ServiceDetail {
   id: string;
@@ -30,7 +33,7 @@ const serviceDetails: ServiceDetail[] = [
     priceRange: "$20-$40",
     benefits: ["Professional nail shaping", "Long-lasting gel polish", "Cuticle care", "Clean, polished look"],
     process: ["Nail preparation & shaping", "Cuticle treatment", "Polish application", "Finishing touches", "Quick dry or UV cure"],
-    image: gelImage
+    image: manicureImage
   },
   {
     id: "pedicure-services", 
@@ -54,7 +57,7 @@ const serviceDetails: ServiceDetail[] = [
     priceRange: "$35-$65+", 
     benefits: ["Extended nail length", "Durable finish", "Custom designs", "Professional strength"],
     process: ["Nail preparation", "Extension application", "Shaping & filing", "Polish application", "Final inspection"],
-    image: gelImage
+    image: extensionsImage
   },
   {
     id: "waxing-services",
@@ -66,7 +69,7 @@ const serviceDetails: ServiceDetail[] = [
     priceRange: "$6-$60+",
     benefits: ["Smooth, hair-free skin", "Long-lasting results", "Professional technique", "Comfortable experience"],
     process: ["Skin preparation", "Wax application", "Hair removal", "Soothing treatment", "Aftercare advice"],
-    image: pedicureImage
+    image: waxingImage
   },
   {
     id: "eyelash-services",
@@ -78,7 +81,7 @@ const serviceDetails: ServiceDetail[] = [
     priceRange: "$35",
     benefits: ["Enhanced eye appearance", "Professional application", "Quality results", "Confidence boost"],
     process: ["Consultation", "Preparation", "Application", "Final touch-ups", "Aftercare instructions"],
-    image: gelImage
+    image: eyelashImage
   }
 ];
 
