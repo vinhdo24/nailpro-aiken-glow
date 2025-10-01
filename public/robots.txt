@@ -14,7 +14,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://nailproandspa.com/sitemap.xml
+Sitemap: https://nailproinaiken.us/sitemap.xml
 
 # Crawl-delay for courtesy  
 Crawl-delay: 1

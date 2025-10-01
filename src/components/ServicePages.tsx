@@ -106,6 +106,7 @@ export const ServicePages = () => {
                   src={service.image} 
                   alt={`Professional ${service.name.toLowerCase()} at Nail Pro & Spa Aiken SC - ${service.shortDescription}`}
                   className="w-full h-48 object-cover group-hover:scale-105 transition-luxury"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
               </div>

@@ -8,12 +8,14 @@ import { ServicePages } from "@/components/ServicePages";
 import { Footer } from "@/components/Footer";
 import { SEOHead } from "@/components/SEOHead";
 import { StructuredData } from "@/components/StructuredData";
+import { FAQSchema } from "@/components/FAQSchema";
 
 const Index = () => {
   return (
     <>
       <SEOHead />
       <StructuredData />
+      <FAQSchema />
       <div className="min-h-screen">
         <Navigation />
         <div id="hero">
