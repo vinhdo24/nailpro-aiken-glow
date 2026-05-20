@@ -3,157 +3,94 @@
 @tailwind utilities;
 
 @layer utilities {
-  .scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;
-  }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
 }
 
-/* Nail Pro & Spa Design System - Elegant spa and luxury nail salon aesthetic */
-
+/* Nail Pro & Spa — Luxury Gold + Cream Design System */
 @layer base {
   :root {
-    /* Spa & Luxury Color Palette */
-    --background: 350 20% 99%;
-    --foreground: 350 15% 15%;
+    --background: 42 60% 98%;        /* warm cream #fdfcf8 */
+    --foreground: 0 0% 8%;           /* near black #141414 */
 
-    --card: 350 25% 98%;
-    --card-foreground: 350 15% 15%;
+    --card: 42 60% 99%;
+    --card-foreground: 0 0% 8%;
 
-    --popover: 350 25% 98%;
-    --popover-foreground: 350 15% 15%;
+    --popover: 42 60% 99%;
+    --popover-foreground: 0 0% 8%;
 
-    /* Rose Gold & Blush Primary */
-    --primary: 350 70% 65%;
-    --primary-foreground: 350 20% 99%;
-    --primary-glow: 350 85% 75%;
+    /* Luxury Gold */
+    --primary: 44 53% 54%;           /* #c9a84c */
+    --primary-foreground: 42 60% 98%;
+    --gold: 44 53% 54%;
+    --gold-light: 44 65% 70%;
+    --gold-dark: 40 55% 38%;
 
-    /* Champagne & Cream Secondary */
-    --secondary: 45 35% 95%;
-    --secondary-foreground: 350 25% 25%;
+    --secondary: 42 40% 94%;
+    --secondary-foreground: 0 0% 12%;
 
-    /* Soft neutrals */
-    --muted: 350 15% 96%;
-    --muted-foreground: 350 10% 55%;
+    --muted: 42 30% 94%;
+    --muted-foreground: 0 0% 40%;
 
-    /* Warm accent */
-    --accent: 30 65% 85%;
-    --accent-foreground: 350 25% 25%;
+    --accent: 44 53% 54%;
+    --accent-foreground: 42 60% 98%;
 
     --destructive: 0 65% 50%;
-    --destructive-foreground: 350 20% 99%;
+    --destructive-foreground: 42 60% 98%;
 
-    --border: 350 20% 90%;
-    --input: 350 20% 94%;
-    --ring: 350 70% 65%;
+    --border: 42 25% 88%;
+    --input: 42 25% 92%;
+    --ring: 44 53% 54%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    /* Luxury Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(350, 70%, 65%), hsl(350, 85%, 75%));
-    --gradient-hero: linear-gradient(135deg, hsl(350, 70%, 65%) 0%, hsl(30, 65%, 85%) 50%, hsl(45, 35%, 95%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(350, 25%, 98%), hsl(350, 20%, 96%));
-
-    /* Elegant Shadows */
-    --shadow-luxury: 0 20px 40px -10px hsl(350, 50%, 80% / 0.3);
-    --shadow-glow: 0 0 30px hsl(350, 70%, 75% / 0.4);
-    --shadow-soft: 0 4px 20px hsl(350, 30%, 85% / 0.2);
-
-    /* Smooth Animations */
-    --transition-luxury: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-smooth: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-
-    --sidebar-background: 350 25% 98%;
-    --sidebar-foreground: 350 15% 35%;
-    --sidebar-primary: 350 70% 65%;
-    --sidebar-primary-foreground: 350 20% 99%;
-    --sidebar-accent: 350 20% 95%;
-    --sidebar-accent-foreground: 350 15% 35%;
-    --sidebar-border: 350 20% 90%;
-    --sidebar-ring: 350 70% 65%;
-  }
-
-  .dark {
-    /* Dark spa theme - optional elegant night mode */
-    --background: 350 15% 8%;
-    --foreground: 350 20% 95%;
-
-    --card: 350 20% 12%;
-    --card-foreground: 350 20% 95%;
-
-    --popover: 350 20% 12%;
-    --popover-foreground: 350 20% 95%;
-
-    --primary: 350 70% 65%;
-    --primary-foreground: 350 15% 8%;
-
-    --secondary: 350 10% 18%;
-    --secondary-foreground: 350 20% 95%;
-
-    --muted: 350 10% 18%;
-    --muted-foreground: 350 15% 65%;
-
-    --accent: 30 50% 70%;
-    --accent-foreground: 350 15% 8%;
-
-    --destructive: 0 65% 50%;
-    --destructive-foreground: 350 20% 95%;
-
-    --border: 350 15% 20%;
-    --input: 350 15% 20%;
-    --ring: 350 70% 65%;
-
-    --sidebar-background: 350 15% 8%;
-    --sidebar-foreground: 350 20% 95%;
-    --sidebar-primary: 350 70% 65%;
-    --sidebar-primary-foreground: 350 15% 8%;
-    --sidebar-accent: 350 10% 18%;
-    --sidebar-accent-foreground: 350 20% 95%;
-    --sidebar-border: 350 15% 20%;
-    --sidebar-ring: 350 70% 65%;
+    --gradient-gold: linear-gradient(135deg, hsl(44 65% 70%), hsl(44 53% 54%) 50%, hsl(40 55% 38%));
+    --shadow-gold: 0 10px 30px -8px hsl(44 53% 54% / 0.45);
+    --shadow-gold-soft: 0 4px 18px hsl(44 53% 54% / 0.18);
   }
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-
+  * { @apply border-border; }
   body {
-    @apply bg-background text-foreground font-light;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    @apply bg-background text-foreground;
+    font-family: 'Raleway', system-ui, sans-serif;
+    font-weight: 300;
   }
-
   h1, h2, h3, h4, h5, h6 {
-    @apply font-normal tracking-tight;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 500;
+    @apply tracking-tight;
   }
 }
 
 @layer components {
   .glass-effect {
-    @apply backdrop-blur-sm bg-white/80 dark:bg-black/20 border border-white/20;
+    @apply backdrop-blur-md bg-background/75 border-b border-border/60;
   }
-
-  .luxury-gradient {
-    background: var(--gradient-primary);
+  .bg-gold-gradient { background: var(--gradient-gold); }
+  .text-gold-gradient {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
-
-  .hero-gradient {
-    background: var(--gradient-hero);
+  .shadow-gold { box-shadow: var(--shadow-gold); }
+  .shadow-gold-soft { box-shadow: var(--shadow-gold-soft); }
+  .gold-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, hsl(var(--gold) / 0.6), transparent);
   }
-
-  .transition-luxury {
-    transition: var(--transition-luxury);
+  .dotted-leader {
+    flex: 1;
+    border-bottom: 1px dotted hsl(var(--muted-foreground) / 0.5);
+    margin: 0 0.5rem;
+    transform: translateY(-4px);
   }
-
-  .shadow-luxury {
-    box-shadow: var(--shadow-luxury);
-  }
-
-  .shadow-glow {
-    box-shadow: var(--shadow-glow);
-  }
+  .luxury-gradient { background: var(--gradient-gold); }
+  .transition-luxury { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+  .transition-smooth { transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+  .shadow-luxury { box-shadow: var(--shadow-gold); }
+  .shadow-glow { box-shadow: 0 0 30px hsl(var(--gold) / 0.4); }
+  .shadow-soft { box-shadow: var(--shadow-gold-soft); }
 }
