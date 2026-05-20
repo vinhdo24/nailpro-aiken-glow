@@ -189,5 +189,7 @@ export const openBooking = (source: string) => {
     window.dataLayer.push({ event: "booking_click", source });
     window.gtag?.("event", "booking_click", { source });
   } catch { /* no-op */ }
-  if (typeof window !== "undefined") window.open(buildBookingUrl(source), "_blank", "noopener,noreferrer");
+  if (typeof window !== "undefined") {
+    window.location.href = `/book?source=${encodeURIComponent(source)}`;
+  }
 };
